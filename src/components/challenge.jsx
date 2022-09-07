@@ -55,7 +55,7 @@ const Challenge = () => {
         <View style={styles.NBATeam}>
           <TextNBA>{item.team.name}</TextNBA>
         </View>
-        <View styls={styles.imageNBA}>
+        <View style={styles.imageNBA}>
           <Image
             source={{
               uri: 'https://logo-logos.com/2017/11/nba-logo.png',
@@ -75,9 +75,7 @@ const Challenge = () => {
         }}
         resizeMode="contain"
         style={{
-          width: '100%',
           height: 120,
-          alignSelf: 'center',
         }}
       />
       <View style={styles.metaData}>
@@ -97,11 +95,6 @@ const Challenge = () => {
           style={{ height: 640 }}
         />
       </View>
-
-      <View></View>
-      <View></View>
-      <View></View>
-      <View></View>
     </Container>
   );
 };
@@ -135,8 +128,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: '1rem',
   },
   imageNBA: {
-    width: '100%',
-    justifyContent: 'center',
+    alignItems: 'center',
   },
   metaData: {
     flexDirection: 'row',
