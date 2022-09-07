@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 
 const Container = styled(View)`
   padding: 0rem 2rem 1rem;
+  
 `;
 
 const BaseText = styled(Text)`
