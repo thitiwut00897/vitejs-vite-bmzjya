@@ -46,7 +46,7 @@ const Challenge = () => {
   });
   const renderNBA = ({ item }) => {
     return (
-      <View>
+      <View style={{ paddingVertical: 4 }}>
         <View style={styles.NBAPlayer}>
           <TextNBA>
             {item.first_name} {item.last_name}
@@ -80,14 +80,24 @@ const Challenge = () => {
           alignSelf: 'center',
         }}
       />
+      <View style={styles.metaData}>
+        {MetaData ? (
+          <Text>
+            {MetaData.per_page} out of {MetaData.total_count} players is loaded
+          </Text>
+        ) : (
+          <Text>loadding</Text>
+        )}
+      </View>
       <View style={styles.NBABar}>
         <FlatList
           data={Data}
           renderItem={renderNBA}
           keyExtractor={(item) => item.id}
+          style={{ height: 640 }}
         />
       </View>
-      <View></View>
+
       <View></View>
       <View></View>
       <View></View>
@@ -127,6 +137,11 @@ const styles = StyleSheet.create({
   imageNBA: {
     width: '100%',
     justifyContent: 'center',
+  },
+  metaData: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingVertical: 5,
   },
 });
 export default Challenge;
