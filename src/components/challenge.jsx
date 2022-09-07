@@ -43,7 +43,7 @@ const Challenge = () => {
   };
   useEffect(() => {
     getData();
-  });
+  }, []);
   const renderNBA = ({ item }) => {
     return (
       <View style={{ paddingVertical: 4 }}>
@@ -61,7 +61,7 @@ const Challenge = () => {
               uri: 'https://logo-logos.com/2017/11/nba-logo.png',
             }}
             resizeMode="contain"
-            style={{ height: 57, width: 57 }}
+            style={{ height: 60, width: 60 }}
           />
         </View>
       </View>
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   NBAPlayer: {
     backgroundColor: 'rgb(22, 24, 144)',
-    height: 57,
+    height: 60,
     width: '50%',
     position: 'absolute',
     left: 0,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   },
   NBATeam: {
     backgroundColor: 'rgb(208, 29, 29)',
-    height: 57,
+    height: 60,
     width: '50%',
     position: 'absolute',
     right: 0,
