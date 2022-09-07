@@ -61,7 +61,7 @@ const Challenge = () => {
               uri: 'https://logo-logos.com/2017/11/nba-logo.png',
             }}
             resizeMode="contain"
-            style={{ height: 60, width: 60 }}
+            style={{ height: 65, width: 65 }}
           />
         </View>
       </View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   },
   NBAPlayer: {
     backgroundColor: 'rgb(22, 24, 144)',
-    height: 60,
+    height: 65,
     width: '50%',
     position: 'absolute',
     left: 0,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   NBATeam: {
     backgroundColor: 'rgb(208, 29, 29)',
-    height: 60,
+    height: 65,
     width: '50%',
     position: 'absolute',
     right: 0,
